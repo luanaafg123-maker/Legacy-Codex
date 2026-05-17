@@ -1,0 +1,28 @@
+@layer base {
+  :root {
+    --bg-main: #121212;
+    --bg-surface: #1A1A1A;
+    --text-primary: #F5F5F5;
+    --text-muted: #888888;
+    --accent-copper: #B87333;
+    --border-subtle: #2A2A2A;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-graphite text-[var(--text-primary)] antialiased selection:bg-copper/30 selection:text-[var(--text-primary)];
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-graphite;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full hover:bg-copper/40 transition-colors;
+  }
+}

@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@/styles/theme.css";
+
+@layer components {
+  .input-base {
+    @apply w-full bg-surface border border-border rounded-lg px-4 py-3 text-[var(--text-primary)] placeholder:text-muted focus:outline-none focus:border-copper transition-colors font-mono text-sm;
+  }
+  .btn-base {
+    @apply px-6 py-3 bg-copper text-graphite font-medium rounded-lg hover:bg-copper-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm font-mono;
+  }
+  .badge {
+    @apply text-[10px] uppercase tracking-wider px-2.5 py-1 rounded border font-medium;
+  }
+  .card-hover {
+    @apply border border-border/60 rounded-xl p-5 hover:border-copper/40 hover:bg-surface/60 transition-all duration-200 cursor-pointer;
+  }
+}
