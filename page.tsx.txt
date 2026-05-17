@@ -1,0 +1,19 @@
+import Link from "next/link";
+
+export default function HomePage() {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-[60vh] text-center space-y-6">
+      <h1 className="text-4xl md:text-6xl font-light tracking-wide text-[var(--text-primary)]">
+        Legacy <span className="text-copper">Codex</span>
+      </h1>
+      <p className="text-muted max-w-md font-mono text-sm md:text-base">
+        Explore e catalogue relíquias digitais, componentes de hardware e históricos técnicos perdidos no tempo.
+      </p>
+      <div className="flex gap-4 font-mono text-sm pt-4">
+        <Link href="/create-item" className="px-6 py-3 bg-copper text-graphite font-medium rounded-lg hover:bg-copper-light transition-colors text-sm font-mono">
+          Novo Registro
+        </Link>
+      </div>
+    </div>
+  );
+}
