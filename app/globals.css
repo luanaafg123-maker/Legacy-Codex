@@ -2,19 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "@/styles/theme.css";
+@layer base {
+  :root {
+    --graphite: #121212;
+    --surface: #1A1A1A;
+    --text-primary: #F5F5F5;
+    --text-muted: #888888;
+    --text-dim: #555555;
+    --copper: #B87333;
+    --copper-light: #D49A6A;
+    --copper-dark: #8A521F;
+    --border: #2A2A2A;
+    --success: #10B981;
+    --warning: #F59E0B;
+    --error: #EF4444;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-graphite text-[var(--text-primary)] antialiased;
+  }
+
+  ::selection {
+    @apply bg-copper/30 text-[var(--text-primary)];
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-graphite;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full hover:bg-copper/40 transition-colors;
+  }
+}
 
 @layer components {
   .input-base {
-    @apply w-full bg-surface border border-border rounded-lg px-4 py-3 text-[var(--text-primary)] placeholder:text-muted focus:outline-none focus:border-copper transition-colors font-mono text-sm;
+    @apply w-full bg-surface border border-border rounded-lg px-4 py-3 text-[var(--text-primary)] placeholder-[var(--text-muted)] focus:outline-none focus:border-copper transition-colors font-mono text-sm;
   }
-  .btn-base {
-    @apply px-6 py-3 bg-copper text-graphite font-medium rounded-lg hover:bg-copper-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm font-mono;
+
+  .btn-primary {
+    @apply px-6 py-3 bg-copper text-graphite font-medium rounded-lg hover:bg-copper-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm font-mono inline-flex items-center justify-center gap-2;
   }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-transparent border border-copper text-copper font-medium rounded-lg hover:bg-copper/10 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm font-mono inline-flex items-center justify-center gap-2;
+  }
+
   .badge {
-    @apply text-[10px] uppercase tracking-wider px-2.5 py-1 rounded border font-medium;
+    @apply text-[10px] uppercase tracking-wider px-2.5 py-1 rounded border font-medium inline-flex items-center;
   }
-  .card-hover {
-    @apply border border-border/60 rounded-xl p-5 hover:border-copper/40 hover:bg-surface/60 transition-all duration-200 cursor-pointer;
+
+  .card-base {
+    @apply bg-surface border border-border/60 rounded-xl p-5 hover:border-copper/40 hover:bg-surface/80 transition-all duration-200;
+  }
+
+  .section-title {
+    @apply text-2xl font-light text-[var(--text-primary)] mb-6 border-b border-border/40 pb-3;
   }
 }

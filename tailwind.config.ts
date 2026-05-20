@@ -8,11 +8,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        graphite: "#121212",
-        surface: "#1A1A1A",
-        copper: { DEFAULT: "#B87333", light: "#D49A6A", dark: "#8A521F" },
-        muted: "#888888",
-        border: "#2A2A2A",
+        graphite: "var(--graphite)",
+        surface: "var(--surface)",
+        copper: {
+          DEFAULT: "var(--copper)",
+          light: "var(--copper-light)",
+          dark: "var(--copper-dark)",
+        },
+        muted: "var(--text-muted)",
+        border: "var(--border)",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],

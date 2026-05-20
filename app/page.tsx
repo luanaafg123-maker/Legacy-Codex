@@ -4,14 +4,12 @@ export default function HomePage() {
       <h1 className="text-5xl md:text-7xl font-light tracking-tight text-[var(--text-primary)] mb-6">
         Legacy Codex
       </h1>
-      <p className="text-muted text-lg md:text-xl font-light tracking-wide max-w-xl">
+      <p className="text-[var(--text-muted)] text-lg md:text-xl font-light tracking-wide max-w-xl">
         A archive of digital relics
       </p>
       <div className="mt-10 flex flex-col sm:flex-row gap-4">
-        <a href="/items" className="btn-base">Explorar Acervo</a>
-        <a href="/create-item" className="btn-base bg-transparent border border-copper text-copper hover:bg-copper/10">
-          Adicionar Item
-        </a>
+        <a href="/items" className="btn-primary">Explorar Acervo</a>
+        <a href="/create-item" className="btn-secondary">Adicionar Item</a>
       </div>
     </section>
   );

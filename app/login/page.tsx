@@ -5,9 +5,9 @@ export default function LoginPage() {
       <form className="w-full space-y-4">
         <input type="email" placeholder="Email" className="input-base" />
         <input type="password" placeholder="Senha" className="input-base" />
-        <button type="submit" className="btn-base w-full">Entrar</button>
+        <button type="submit" className="btn-primary w-full">Entrar</button>
       </form>
-      <p className="mt-6 text-sm text-muted text-center">
+      <p className="mt-6 text-sm text-[var(--text-muted)] text-center">
         Não possui conta? <a href="/register" className="text-copper hover:underline">Criar conta</a>
       </p>
     </div>
