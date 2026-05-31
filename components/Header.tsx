@@ -1,4 +1,5 @@
-import Link from "next/link";
+'use client';
+import Link from 'next/link';
 
 export default function Header() {
   return (
@@ -10,7 +11,6 @@ export default function Header() {
         >
           Legacy Codex
         </Link>
-        
         <nav className="hidden md:flex items-center gap-8 text-sm text-[var(--text-muted)] font-mono">
           <Link href="/items" className="hover:text-[var(--text-primary)] transition-colors">Acervo</Link>
           <Link href="/recovery" className="hover:text-[var(--text-primary)] transition-colors">Recovery Hub</Link>

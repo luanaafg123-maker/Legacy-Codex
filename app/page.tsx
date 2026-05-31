@@ -9,7 +9,7 @@ export default function HomePage() {
       </p>
       <div className="mt-10 flex flex-col sm:flex-row gap-4">
         <a href="/items" className="btn-primary">Explorar Acervo</a>
-        <a href="/create-item" className="btn-secondary">Adicionar Item</a>
+        <a href="/login" className="btn-secondary">Entrar</a>
       </div>
     </section>
   );

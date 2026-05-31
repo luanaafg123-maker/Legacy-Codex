@@ -1,25 +1,7 @@
-# Dependencies
-node_modules/
-
-# Next.js
-.next/
-out/
-
-# Environment
-.env
+.next
+node_modules
 .env.local
-.env*.local
-
-# OS
 .DS_Store
-*.swp
-*.swo
-
-# IDE
-.idea/
-.vscode/
 *.log
-
-# Build
-*.zip
-*.tar.gz
+.idea
+.vscode
