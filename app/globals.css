@@ -9,22 +9,16 @@
     --text-primary: #F5F5F5;
     --text-muted: #888888;
     --copper: #B87333;
-    --copper-light: #D49A6A;
     --border: #2A2A2A;
     --success: #10B981;
     --warning: #F59E0B;
     --error: #EF4444;
   }
-  html { @apply scroll-smooth; }
-  body { @apply bg-graphite text-[var(--text-primary)] antialiased; }
-  ::selection { @apply bg-copper/30 text-[var(--text-primary)]; }
 }
 
 @layer components {
-  .input-base { @apply w-full bg-surface border border-border rounded-lg px-4 py-3 text-[var(--text-primary)] placeholder-[var(--text-muted)] focus:outline-none focus:border-copper transition-colors font-mono text-sm; }
-  .btn-primary { @apply px-6 py-3 bg-copper text-graphite font-medium rounded-lg hover:bg-copper-light transition-colors disabled:opacity-50 text-sm font-mono; }
-  .btn-secondary { @apply px-6 py-3 bg-transparent border border-copper text-copper font-medium rounded-lg hover:bg-copper/10 transition-colors disabled:opacity-50 text-sm font-mono; }
-  .badge { @apply text-[10px] uppercase tracking-wider px-2.5 py-1 rounded border font-medium; }
-  .card-base { @apply bg-surface border border-border/60 rounded-xl p-5 hover:border-copper/40 transition-all duration-200; }
-  .section-title { @apply text-2xl font-light text-[var(--text-primary)] mb-6 border-b border-border/40 pb-3; }
+  .btn-primary { @apply px-6 py-3 bg-copper text-graphite font-medium rounded-lg hover:opacity-90 transition-opacity; }
+  .btn-secondary { @apply px-6 py-3 bg-transparent border border-copper text-copper font-medium rounded-lg hover:bg-copper/10 transition-colors; }
+  .card-base { @apply bg-surface border border-border rounded-xl p-5 hover:border-copper/40 transition-all; }
+  .badge { @apply text-xs px-2 py-1 rounded border font-medium; }
 }
